@@ -2,7 +2,7 @@ package hvcnbcvt_uddd.myapplication.data.repository;
 
 import java.util.List;
 
-import hvcnbcvt_uddd.myapplication.data.model.Name;
+import hvcnbcvt_uddd.myapplication.data.model.User;
 import hvcnbcvt_uddd.myapplication.data.source.HomeDataSource;
 
 public class HomeRepository implements HomeDataSource.Local, HomeDataSource.Remote {
@@ -19,9 +19,8 @@ public class HomeRepository implements HomeDataSource.Local, HomeDataSource.Remo
         mRemote.getUserFromServer();
     }
 
-
     @Override
-    public List<Name> getUserFromDatabase() {
+    public List<User> getUserFromDatabase() {
         return mLocal.getUserFromDatabase();
     }
 }

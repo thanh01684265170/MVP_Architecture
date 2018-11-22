@@ -1,7 +1,8 @@
 package hvcnbcvt_uddd.myapplication.data.source;
 
 import java.util.List;
-import hvcnbcvt_uddd.myapplication.data.model.Name;
+
+import hvcnbcvt_uddd.myapplication.data.model.User;
 
 public interface HomeDataSource {
     interface Remote {
@@ -9,6 +10,6 @@ public interface HomeDataSource {
     }
 
     interface Local {
-        List<Name> getUserFromDatabase();
+        List<User> getUserFromDatabase();
     }
 }
