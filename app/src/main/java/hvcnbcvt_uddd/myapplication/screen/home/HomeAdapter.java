@@ -33,7 +33,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         User user = mUsers.get(i);
-        viewHolder.mText_name.setText(user.getName());
+        viewHolder.mTextName.setText(user.getName());
     }
 
     @Override
@@ -42,11 +42,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView mText_name;
+        private TextView mTextName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            mText_name = (TextView) itemView.findViewById(R.id.text_name);
+            mTextName = (TextView) itemView.findViewById(R.id.text_name);
         }
     }
 
