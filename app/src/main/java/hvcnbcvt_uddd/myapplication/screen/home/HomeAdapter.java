@@ -15,12 +15,17 @@ import hvcnbcvt_uddd.myapplication.R;
 import hvcnbcvt_uddd.myapplication.data.model.User;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
-    private List<User> mUsers;
     private Context mContext;
+    private List<User> mUsers;
 
-    public HomeAdapter(List<User> lists, Context context) {
-        mUsers = lists;
+    public HomeAdapter(Context context,List<User> lists) {
         mContext = context;
+        mUsers = lists;
+    }
+
+    public void addData(List<User> users){
+        mUsers.addAll(users);
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -48,6 +53,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             super(itemView);
             mTextName = (TextView) itemView.findViewById(R.id.text_name);
         }
+
     }
 
 }
